@@ -1,15 +1,15 @@
 name: Deploy Aws Lambda
 
 on:
-   push:
-     branches:
-        - main
-       paths:
-        - 'lambda/**'
+  push:
+    branches:
+      - main
+      paths:
+      - 'lambda/**'
 
 
 jobs: 
-    deploy_lambda: ## name of our job 
+    deploy_lambda: ## name of our j
         runs-on: ubuntu-latest ## sets or specifies the runner 
         steps:
           - uses: actions/checkout@v3S
