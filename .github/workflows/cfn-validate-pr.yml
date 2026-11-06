@@ -2,6 +2,7 @@ name: Validate on CloudFormation on PR
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, closed]
     paths:
       - 'cloudformation/**'
 
@@ -9,8 +10,9 @@ permissions:
   pull-requests: write
   contents: read
 
-jobs: 
+jobs:
   validate-cfn:
+    if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
