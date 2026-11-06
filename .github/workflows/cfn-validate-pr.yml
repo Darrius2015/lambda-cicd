@@ -5,6 +5,8 @@ on:
     types: [opened, synchronize, reopened, closed]
     paths:
       - 'cloudformation/**'
+      - '.github/workflows/cfn-validate-pr.yml'
+
 
 permissions:
   pull-requests: write
